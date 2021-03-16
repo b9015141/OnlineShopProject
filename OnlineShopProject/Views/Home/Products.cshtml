@@ -1,11 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "Course List";
-}
-<h1>@ViewData["Title"]</h1>
 
-<p>Course Details here</p>
+    ViewData["Title"] = "Product List";
 
-@foreach (var item in (List<String>)ViewData["Products"])
-{
-    <p>@item</p>
 }
+
+<h2>Our Products</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.ProductName</li>
+        <li>@item.ProductPrice</li>
+    }
+</ul>

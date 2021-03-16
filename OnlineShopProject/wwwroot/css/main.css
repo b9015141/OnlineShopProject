@@ -1,17 +1,30 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+
 }
 
-table{
-    border-collapse: collapse;
-
+header{
+    background: lightpink;
+    padding: 2rem;
 }
 
-tr{
-    border-bottom: 1px solid #0094ff;
+a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-decoration:solid;
+    text-size-adjust: 12%;
 }
 
-th,td{
-    padding: 5px;
+main{
+    background: coral;
+}
 
+footer{
+    background: wheat;
+    padding: 2rem;
+    text-align: center;
 }
