@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Course List";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Course Details here</p>
+
+@foreach (var item in (List<String>)ViewData["Products"])
+{
+    <p>@item</p>
+}

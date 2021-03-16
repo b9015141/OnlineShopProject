@@ -28,6 +28,16 @@ namespace OnlineShopProject.Controllers
             return View();
         }
 
+        public IActionResult Products()
+        {
+            string[] myProducts = new string[3] { "Design", "Software Engineering", "Computer Science" };
+            List<string> products = new List<string>();
+            // adding an array in a List
+            products.AddRange(myProducts);
+            ViewData["Products"] = products;
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

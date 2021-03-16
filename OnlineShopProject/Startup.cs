@@ -36,6 +36,7 @@ namespace OnlineShopProject
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
