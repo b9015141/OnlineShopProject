@@ -1,15 +1,14 @@
 ﻿@{
-
-    ViewData["Title"] = "Product List";
+    ViewData["Title"] = "Our Products";
 
 }
 
-<h2>Our Products</h2>
+
 
 <ul>
     @foreach (var item in Model)
     {
         <li>@item.ProductName</li>
-        <li>@item.ProductPrice</li>
+        <li>@item.PrPrice</li>
     }
 </ul>
