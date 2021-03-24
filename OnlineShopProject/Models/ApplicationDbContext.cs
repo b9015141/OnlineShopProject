@@ -14,6 +14,8 @@ namespace OnlineShopProject.Models
         }
 
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<UserRegistration> Registers { get; set; }
     }
 }
 

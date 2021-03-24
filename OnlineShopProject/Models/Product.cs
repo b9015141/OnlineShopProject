@@ -13,7 +13,6 @@ namespace OnlineShopProject.Models
 
         public string ProductName { get; set; }
         public string PrDescription { get; set; }
-
         public int PrSize { get; set; }
 
         public string PrColor { get; set; }

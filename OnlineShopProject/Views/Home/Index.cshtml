@@ -1,12 +1,26 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
 
 
 
+
 <main>
-    <h2>Our Products</h2>
-    <p> this is going to be the main section </p>
+
+    <p> Shop for handmade, vintage, custom and unique items</p>
+
+   
+        <div class="column">
+            <img src="~/images/personalised-mug.png" alt="personalised-mug">
+            <img src="~/images/personalised-cristal-box.png" alt="">
+            <img src="~/images/engraved-wine-cups.png" alt="">
+            <img src="~/images/engraved-wine-cups.png" alt="">
+        </div>
+
+       
 </main>
 
+
 <partial name="_Footer" />
+<p>@DateTime.Now.ToString("dd MMM yyyy")</p>

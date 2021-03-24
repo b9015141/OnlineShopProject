@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Our Products";
+    Layout = "_Layout";
 
 }
 
@@ -9,6 +10,9 @@
     @foreach (var item in Model)
     {
         <li>@item.ProductName</li>
+        <li>@item.PrDescription</li>
         <li>@item.PrPrice</li>
     }
+
 </ul>
+    
