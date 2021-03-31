@@ -41,6 +41,13 @@ namespace OnlineShopProject.Controllers
 
         }
 
+        public IActionResult Products1()
+
+        {
+            return View();
+
+        }
+
 
         public IActionResult Registers()
 

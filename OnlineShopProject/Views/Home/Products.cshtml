@@ -5,14 +5,33 @@
 }
 
 
+<main>
+   
+    <h1>Our Products</h1> 
+  
+    <div class="wrapper">
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@item.ProductName</li>
-        <li>@item.PrDescription</li>
-        <li>@item.PrPrice</li>
-    }
+        @foreach (var item in Model)
+         {
+            <div class="contentImg">
+                @item.Image
+            </div>
 
-</ul>
-    
+            <div class="contenttxt">
+                <h2>@item.ProductName</h2>
+
+                <ul>
+
+                    <li>@item.PrDescription</li>
+                    <li>£@item.PrPrice</li>
+
+                </ul>
+            </div>
+         }
+    </div>
+
+
+
+</main>
+
+    <partial name="_Footer" />
