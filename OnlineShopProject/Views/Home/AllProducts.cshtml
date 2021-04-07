@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Full Product List";
+    ViewData["PageHeading"] = "Full Product List";
+}
+
+<h2>All Products</h2>
+
+<section class="wrap">
+    @foreach (var item in Model)
+     {
+        <div class="filmThumb">
+            <div><a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id"><img src="~/images/@item.Image" alt="@item.ProductName" /></a></div>
+            <h3><a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">@item.ProductName</a></h3>
+        </div>
+     }
+</section>

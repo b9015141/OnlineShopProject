@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using OnlineShopProject.Models;
 
@@ -48,7 +49,58 @@ namespace OnlineShopProject.Controllers
 
         }
 
-        
+        public IActionResult AllProducts()
+
+        {
+
+            List<Product> model = _context.Products.ToList();
+
+            return View(model);
+
+        }
+
+
+        public IActionResult Search(String SearchString, String PrType)
+        {
+
+            var Items = from m in _context.Products
+
+                         select m;
+
+            if (!string.IsNullOrEmpty(SearchString))
+
+            {
+
+                Items = Items.Where(s => s.ProductName.Contains(SearchString));
+
+            }
+
+            if (!string.IsNullOrEmpty(PrType))
+            {
+                Items = Items.Where(x => x.Image == PrType);
+            }
+
+            var productImage = _context.Products.Select(m => m.Image).Distinct();
+
+
+            List<Product> model = Items.ToList();
+            ViewData["SearchString"] = SearchString;
+            ViewData["FilterProduct"] = PrType;
+            ViewData["productImage"] = productImage.ToList();
+            ViewData["productImageSelectList"] = new SelectList(productImage.ToList());
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public IActionResult ProductDetail(int id)
+        {
+            
+            Product model = _context.Products.Find(id);
+            return View(model);
+        }
+
+
 
 
         public IActionResult Registers()
@@ -61,6 +113,8 @@ namespace OnlineShopProject.Controllers
 
         }
 
+
+       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
