@@ -59,6 +59,14 @@ namespace OnlineShopProject.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult ProductDetail(int id)
+        {
+
+            Product model = _context.Products.Find(id);
+            return View(model);
+        }
+
 
         public IActionResult Search(String SearchString, String PrType)
         {
@@ -92,14 +100,7 @@ namespace OnlineShopProject.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult ProductDetail(int id)
-        {
-            
-            Product model = _context.Products.Find(id);
-            return View(model);
-        }
-
+      
 
 
 
@@ -113,8 +114,6 @@ namespace OnlineShopProject.Controllers
 
         }
 
-
-       
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

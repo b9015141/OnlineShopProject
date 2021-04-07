@@ -26,6 +26,7 @@ namespace OnlineShopProject
         {
             
                 services.AddControllersWithViews();
+                services.AddSession();
                 services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
@@ -49,6 +50,7 @@ namespace OnlineShopProject
 
             app.UseAuthorization();
 
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
