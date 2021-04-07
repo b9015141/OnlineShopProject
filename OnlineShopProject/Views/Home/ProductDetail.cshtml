@@ -1,0 +1,22 @@
+﻿@model OnlineShopProject.Models.Product
+
+@{
+    ViewData["Title"] = @Model.ProductName;
+    ViewData["PageHeading"] = @Model.ProductName;
+}
+
+
+<section>
+
+    <div class="mainImage">
+        <img src="~/images/@Model.Image" alt="@Model.ProductName" />
+    </div>
+
+    <div class="filmInfo">
+        <h2>@Model.ProductName</h2>
+        <p>@Model.PrDescription</p>
+        <p>Streaming Price: &pound;@((Model.PrPrice).ToString("0.00"))</p>
+
+    </div>
+
+</section>

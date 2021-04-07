@@ -1,0 +1,55 @@
+﻿@model OnlineShopProject.Models.ProductForm
+@{
+    Layout = "_CMS";
+}
+<h1>@Model.ProductName</h1>
+
+
+<form method="post" enctype="multipart/form-data">
+    <input type="hidden" name="FilmID" value="@Model.Id" />
+
+    <div>
+        <label>Product Name</label>
+        <input asp-for="ProductName" />
+    </div>
+
+    <div>
+        <label asp-for="PrDescription">Film Description</label>
+        <textarea asp-for="PrDescription"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="Image">Film Image</label>
+        <input type="text" asp-for="Image" />
+    </div>
+
+    <div>
+        <label asp-for="PrColor">Product Color</label>
+        <input type="text" asp-for="PrColor" />
+    </div>
+
+    <div>
+        <label asp-for="PrSize">Product Size</label>
+        <input type="text" asp-for="PrSize" />
+    </div>
+
+    <div>
+        <label asp-for="PrPrice">Product Price</label>
+        <input type="text" asp-for="PrPrice" />
+    </div>
+
+    <div>
+        <label asp-for="PrPriceSale">Price on Sale</label>
+        <input type="text" asp-for="PrPriceSale" />
+    </div>
+
+    <div>
+        <label asp-for="DateTime">Date added</label>
+        <input type="date" asp-for="DateTime" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update" class="edit" />
+    </div>
+
+</form>

@@ -31,6 +31,13 @@ namespace OnlineShopProject.Controllers
             return View();
         }
 
+        public IActionResult OurWork()
+        {
+            List<OurWork> model = _context.OurWork.ToList();
+
+            return View(model);
+        }
+
         public IActionResult Products()
 
         {
@@ -41,12 +48,7 @@ namespace OnlineShopProject.Controllers
 
         }
 
-        public IActionResult Products1()
-
-        {
-            return View();
-
-        }
+        
 
 
         public IActionResult Registers()

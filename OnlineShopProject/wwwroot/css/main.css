@@ -1,28 +1,29 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    height: 125vh;
-    grid-template-rows: auto 1fr auto;
-    padding: 30px;
-    margin-top: 80px;
-}
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        height: 125vh;
+        grid-template-rows: auto 1fr auto;
+        padding: 30px;
+        margin-top: 80px;
+    }
 
-header {
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 25px 0 black;
-}
+/********** Header  *********/
+    header {
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 25px 0 black;
+    }
 
-    header img {
+     header img {
         height: 40px;
         margin-left: 40px;
-    }
+     }
 
     header * {
         display: inline;
@@ -32,19 +33,77 @@ header {
         margin: 20px;
     }
 
-        header li a {
-            color: black;
-            text-decoration: none;
-        }
+    header li a {
+        color: black;
+        text-decoration: none;
+    }
 
-main {
-    background: coral;
+    main 
+    {
+        background: white;
+    }
+
+/********* Main section *******/
+
+/* breweries styles */
+.products {
+    padding: 2rem;
 }
 
+    .products > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .products > ul > li {
+            border: 1px solid #E2E2E2;
+            border-radius: .5rem;
+    }
+
+    .products > ul > li > figure {
+              max-height: 220px;
+                overflow: hidden;
+                border-top-left-radius: .5rem;
+                border-top-right-radius: .5rem;
+                position: relative;
+    }
+
+                .products > ul > li > figure > img {
+                    width: 100%;
+                }
+
+                .products > ul > li > figure > figcaption {
+                    position: absolute;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,.7);
+                    width: 100%;
+                }
+
+                    .products > ul > li > figure > figcaption > h3 {
+                        color: white;
+                        padding: .75rem;
+                        font-size: 1.25rem;
+                    }
+
+            .products > ul > li > p {
+                font-size: 1rem;
+                line-height: 1.5;
+                padding: 1rem .75rem;
+                color: #666666;
+            }
+
+            .products > ul > li > a {
+                padding: .5rem 1rem;
+                margin: .5rem;
+            }
 
 
-
+/********   Footer    ********/
 footer {
-    background: wheat;
+    background-color: wheat;
+    padding: .75rem;
+    color: white;
     text-align: center;
+    font-size: .75rem;
 }

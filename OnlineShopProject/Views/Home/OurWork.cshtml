@@ -1,8 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Our Work";
+    Layout = "_Layout";
+
 }
 
+<main class="wrapper">
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <h1>Our Products</h1>
+
+    <div class="products" id="products">
+        @foreach (var item in Model)
+         {
+            <ul>
+
+                <li>
+                    <figure>
+                        <img src="~/images/@item.Image" alt="@item.Title" />
+                        <figcaption><h3>@item.Title</h3></figcaption>
+                    </figure>
+
+                    <p>@item.Description</p>
+                    <p>@item.ContactEmail</p>
+                    <p>@item.ContactNo</p>
+                    <a href="#">Get A Quote Now</a>
+  
+                </li>
+            </ul>
+         }
+    </div>
+
+</main>
 
 <partial name="_Footer" />
+
