@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShopProject.Models
 {
-    public class LogIn
+    public class SignIn
     {
         [Required]
         public string UserName { get; set; }

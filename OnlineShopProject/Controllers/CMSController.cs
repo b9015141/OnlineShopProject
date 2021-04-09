@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using OnlineShopProject.Models;
 
 namespace OnlineShopProject.Controllers
 {
+    [Authorize(Roles = "Manager")]
+  
     public class CMSController : Controller
     {
         private readonly ILogger<CMSController> _logger;
@@ -115,7 +118,7 @@ namespace OnlineShopProject.Controllers
             _context.SaveChanges();
             //return View(model);
             return RedirectToAction("Index");
-        }
+        }    
 
     }
 }

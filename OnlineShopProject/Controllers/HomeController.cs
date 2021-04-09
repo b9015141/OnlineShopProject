@@ -99,22 +99,6 @@ namespace OnlineShopProject.Controllers
             return View(model);
         }
 
-
-      
-
-
-
-        public IActionResult Registers()
-
-        {
-
-            List<UserRegistration> model = _context.Registers.ToList();
-
-            return View(model);
-
-        }
-
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
