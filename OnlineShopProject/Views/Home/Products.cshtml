@@ -10,22 +10,14 @@
 
     <h1>Our Products</h1>
 
-    <div class="wrapper">
+    <div class="container">
         @foreach (var item in Model)
          {
-            <ul class="listing">
+           
+                <h2>@item.ProductName</h2>
+                <img src="~/images/@item.Image" alt="@item.ProductName" />
+                <p>@item.PrDescription</p>
 
-                <li>
-
-                    <h2>@item.ProductName</h2>
-
-                    <div class="body">
-
-                        <img src="~/images/@item.Image" alt="@item.ProductName" />
-                        <p>@item.PrDescription</p>                     
-                    </div>                  
-                </li>
-            </ul>
          }
     </div>
 

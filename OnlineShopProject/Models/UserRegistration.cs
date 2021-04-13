@@ -5,7 +5,7 @@ namespace OnlineShopProject.Models
 {
     public class UserRegistration
     {
-        [Required]
+        [Key]
         public string UserName { get; set; }
 
         [Required]

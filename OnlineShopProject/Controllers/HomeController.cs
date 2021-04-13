@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -97,6 +98,16 @@ namespace OnlineShopProject.Controllers
             ViewData["productImage"] = productImage.ToList();
             ViewData["productImageSelectList"] = new SelectList(productImage.ToList());
             return View(model);
+        }
+
+        [Produces("application/json")]
+        public IActionResult ApiData()
+        {
+            List<Product> model = _context.Products.ToList();
+            return Json(model, new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

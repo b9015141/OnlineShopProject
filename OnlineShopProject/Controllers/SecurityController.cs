@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShopProject.Models;
@@ -20,6 +21,10 @@ namespace OnlineShopProject.Controllers
             this.signinManager = signinManager;
         }
 
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
 
         public IActionResult Register()
         {
@@ -92,9 +97,13 @@ namespace OnlineShopProject.Controllers
             return View(obj);
         }
 
-        public IActionResult AccessDenied()
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public IActionResult SignOut()
         {
-            return View();
+            signinManager.SignOutAsync().Wait();
+            return RedirectToAction("SignIn", "Security");
         }
     }
 }
