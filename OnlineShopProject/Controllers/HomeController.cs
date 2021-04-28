@@ -33,6 +33,11 @@ namespace OnlineShopProject.Controllers
             return View();
         }
 
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
         public IActionResult OurWork()
         {
             List<OurWork> model = _context.OurWork.ToList();

@@ -1,32 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "EL TOCADOR DE SUSU";
     Layout = "_Layout";
 }
 
 
-
-
 <main>
 
-    <p> Shop for handmade, vintage, custom and unique items</p>
-    <div class="container">
-        <div>
+    <p class="title"> Shop for handmade, vintage, custom and unique items</p>
+    <div class="grid-container">
+        <div class="grid-item">
             <img src="~/images/personalised-items.png" alt="personalised items" />
         </div>
 
-        <div>
+        <div class="grid-item">
             <img src="~/images/party-organiser.png" alt="parties organisations" />
         </div>
 
-        <div>
+        <div class="grid-item">
             <img src="~/images/Mugs-Discount.png" alt="discounts" />
         </div>
 
-    </div>
+        <div class="grid-item">
+            <img src="~/images/drawing.png" alt="discounts" />
+        </div>
 
+        <div class="grid-item">
+            <img src="~/images/ramadan-sale.png" alt="discounts" />
+        </div>
+
+        <div class="grid-item">
+            <img src="~/images/personalised-present-box.png" alt="discounts" />
+        </div>
+    </div>
+   
+    <partial name="_Footer" />
 </main>
 
 
 
-<p>@DateTime.Now.ToString("dd MMM yyyy")</p>
-<partial name="_Footer" />

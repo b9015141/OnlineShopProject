@@ -3,10 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link for mobile css -->
     <link rel="stylesheet" href="~/css/main.css">
+
+    <!-- link for desktop css -->
     <link rel="stylesheet" href="~/css/site.css">
+
+    <!-- link for google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+
+    <!-- link for social media logos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- link for js -->
     <script src="~/js/site.js"></script>
-    
+
     <title>@ViewData["Title"]</title>
 </head>
 
@@ -20,7 +33,7 @@
                 <i class="fas fa-bars"></i>
             </span>
 
-            <a hrefr="/Home/Index" class="logo"><img src="~/images/logo.png" alt="El TOCADOR DE SUSU"></a>
+            <a href="/Home/Index" class="logo">EL TOCADOR DE SUSU</a>
 
             <ul class="main-nav" id="js-menu">
                 <li><a href="/Home/Index" class="nav-links">Home</a></li>
@@ -28,9 +41,7 @@
                 <li><a href="/Home/OurWork" class="nav-links">Our Work</a></li>
                 <li><a href="/Home/LogIn" class="nav-links">Log In</a></li>
                 <li><a href="/Home/Products" class="nav-links">Basket</a></li>
-                <li><a href="/Home/Privacy" class="nav-links">Contact Us</a></li>
-                <li><a href="/Home/Privacy" class="nav-links">Privacy</a></li>
-                <li><a asp-controller="CMS" asp-action="Index" class="nav-links">CMS</a></li>
+               
             </ul>
         </nav>
 

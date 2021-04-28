@@ -6,30 +6,41 @@
 
 <main class="wrapper">
 
-    <h1>Our Products</h1>
-
-    <div class="products" id="products">
-        @foreach (var item in Model)
-         {
-            <ul>
-
-                <li>
-                    <figure>
-                        <img src="~/images/@item.Image" alt="@item.Title" />
-                        <figcaption><h3>@item.Title</h3></figcaption>
-                    </figure>
-
-                    <p>@item.Description</p>
-                    <p>@item.ContactEmail</p>
-                    <p>@item.ContactNo</p>
-                    <a href="#">Get A Quote Now</a>
-  
-                </li>
-            </ul>
-         }
+    <div class="title">
+        <h1>Our Work</h1>
     </div>
 
+    <div class="grid-container">
+        @foreach (var item in Model)
+        {
+
+            <div class="grid-item">
+                <img src="~/images/@item.Image" alt="@item.Title" />
+
+                <p>@item.Description</p>
+                <p>@item.ContactEmail</p>
+                <p>@item.ContactNo</p>
+                <a href="#">Get A Quote Now</a>
+            </div>
+        }
+
+        <div class="our-work-description">
+            <p>
+                Whatever birthday party you are organising, and whatever budget you are working with 
+                – we have the expertise & creative skills to create your dream event.
+            </p>
+            <br />
+            <ul>
+                <li>Over 20 years of creative event expertise.</li>
+                <li>Over 20 years of creative event expertise.</li>
+                <li>Unrivalled list of quality birthday party services.</li>
+                <li>Seamless integration of every party element.</li>
+                <li>Your own dedicated birthday party planner.</li>
+            </ul>
+        </div>
+    </div>
+    <partial name="_Footer" />
 </main>
 
-<partial name="_Footer" />
+
 

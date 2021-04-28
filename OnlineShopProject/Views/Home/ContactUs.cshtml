@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "_Layout";
+}
+
+
+<main>
+    <section class="mainContent">
+        <div class="informativeMessage">
+            <p>
+                Please get in touch and our expert support team will answer all your questions.
+            </p>
+        </div>
+        <div class="form-title">
+            <span>CONTACT</span>
+            <span>ME</span>
+        </div>
+
+        <div class="container-form">
+            <div class="app-form">
+                <div class="app-form-group">
+                    <form action="mailto:soraya.charef20@gmail.com" id="contact-form" method="post" enctype="text/plain">
+                        <input class="app-form-control" type="name" id="inputEmail" placeholder="NAME" required>
+
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="email" id="inputEmail" placeholder="EMAIL" required>
+                        </div>
+                        <div class="app-form-group">
+                            <input class="app-form-control" type="number" id="inputContactNo" placeholder="CONTACT NO (optional)">
+                        </div>
+                        <div class="app-form-group message">
+                            <input class="app-form-control" type="message" id="inputMessage" placeholder="MESSAGE" required>
+                        </div>
+                        <div class="app-form-group buttons">
+                            <button class="app-form-button">SEND</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <br>
+            <br>
+        </div>
+    </section>
+    <partial name="_Footer" />
+</main>
+
